@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id ="btn1">жмякни меня</button>
+    <button id="btn2">шоу</button>
+    <textarea id="txt1" placeholder="Введите хуйню"></textarea>
+    <script>
+        let btn1= document.getElementById('btn1')
+        let btn2= document.getElementById('btn2')
+        let txt1= document.getElementById('txt1')
+        let arr= []
+        let max = 0
+        let min = 0
+        btn1.onclick = function () {
+            alert('какой-то текст')
+            arr.push(txt1.value)
+        }
+        btn2.onclick = function() {
+            for (let i = 0; i < arr.length; i++){
+            if(max < arr[i]){
+                max = arr[i];
+            }
+            if(min > arr[i]){
+                min = arr[i];
+            }
+            }
+            console.log(max)
+            console.log(min)
+            alert(`${max}`+`${min}`)
+        }
+    </script>
+</body>
+</html>
